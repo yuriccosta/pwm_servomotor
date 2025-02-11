@@ -23,7 +23,7 @@ uint pwm_setup() {
 
 int main() {
     stdio_init_all();  // Inicializa o sistema de I/O
-    uint slice = pwm_setup();  // Configura o PWM e obtém o slice correspondente
+    pwm_setup();  // Configura o PWM
 
     // 1) Posição para 180° (pulso de 2400 µs)
     pwm_set_gpio_level(LED_BLUE, 2400);
