@@ -18,7 +18,7 @@ Este projeto implementa o controle de um servo motor utilizando o pwm na raspber
 3. Depois, se move para **180°** e aguarda **5 segundos**.  
 4. Vai para **0°** e aguarda **5 segundos**.  
 5. Após isso, o servo começa a **movimentação suave** entre **0° e 180°**, com incrementos de **5** a cada **10ms**.  
-6. **Experimento adicional**: O LED RGB na **GPIO 12** é controlado por PWM para demonstrar o efeito da variação do Duty Cycle através da intensidade.  
+6. **Experimento adicional**: O LED RGB na **GPIO 12** é controlado por PWM para demonstrar o efeito da variação do Duty Cycle através da intensidade (Implementado na branch ledBitdoglab, mas basta alterar o pino 22 para 12).  
 
 ## Instruções de Uso
 
