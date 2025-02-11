@@ -2,7 +2,7 @@
 #include "pico/stdlib.h" //subconjunto central de bibliotecas do SDK Pico
 #include "hardware/pwm.h" //biblioteca para controlar o hardware de PWM
 
-#define LED_BLUE 22  // GPIO utilizada para controle do Led Azul
+#define LED_BLUE 12  // GPIO utilizada para controle do Led Azul
 
 // Função para configurar o PWM na frequência desejada (50 Hz)
 uint pwm_setup() {
