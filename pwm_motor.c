@@ -5,7 +5,7 @@
 #define PWM_MOTOR 22  // GPIO utilizada para controle do servo
 
 // Função para configurar o PWM na frequência desejada (50 Hz)
-void pwm_setup() {
+uint pwm_setup() {
     gpio_set_function(PWM_MOTOR, GPIO_FUNC_PWM);         // Configura o pino como saída PWM
     uint slice = pwm_gpio_to_slice_num(PWM_MOTOR);         // Obtém o slice correspondente
 
@@ -17,12 +17,13 @@ void pwm_setup() {
     pwm_set_wrap(slice, 19999);
 
     pwm_set_enabled(slice, true);  // Habilita o slice PWM
+
+    return slice;
 }
 
 int main() {
     stdio_init_all();  // Inicializa o sistema de I/O
-    pwm_setup();       // Configura o PWM
-    uint slice = pwm_gpio_to_slice_num(PWM_MOTOR);
+    uint slice = pwm_setup();  // Configura o PWM e obtém o slice correspondente
 
     // 1) Posição para 180° (pulso de 2400 µs)
     pwm_set_gpio_level(PWM_MOTOR, 2400);
